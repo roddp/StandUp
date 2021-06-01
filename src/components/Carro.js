@@ -8,22 +8,32 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import logo from "../assets/logo.png";
+import { InfoOutlined } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
+    display: "inline-block",
+    margin: "10px",
   },
   media: {
     height: 140,
   },
 });
 
+const precoStyle = {
+  color: "#EA4E3B",
+  fontWeight: "bold",
+  textAlign: "right",
+  alignSelf: "stretch",
+};
+
 const Carro = ({ carro }) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
+      <CardActionArea href="/carros/details">
         <CardMedia
           className={classes.media}
           image={logo}
@@ -34,11 +44,13 @@ const Carro = ({ carro }) => {
             {carro.brand + " " + carro.model}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {carro.year + " • " + carro.hp + "hp" + " • " + carro.color}
           </Typography>
         </CardContent>
       </CardActionArea>
+      <CardActions>
+        <p3 style={precoStyle}>{carro.price + "€"}</p3>{" "}
+      </CardActions>
     </Card>
   );
   /* <div className="task">
