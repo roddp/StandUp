@@ -4,7 +4,7 @@ import Carros from "../pages/Carros";
 import Login from "../pages/Login";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./Navbar";
-import Details from "../pages/Details";
+import Details from '../pages/Details'
 
 const NavRouter = () => {
   return (
@@ -17,11 +17,10 @@ const NavRouter = () => {
         <Route exact path="/carros">
           <Carros></Carros>
         </Route>
-        <Route exact path="/carros/details">
-          <Details></Details>
-        </Route>
         <Route exact path="/login">
           <Login></Login>
+        </Route>
+        <Route path="/carros/details/" component ={(props) => <Details {...props}/>} >
         </Route>
       </Switch>
     </Router>

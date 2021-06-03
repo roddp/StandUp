@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useState } from "react";
+import "./Details.css";
+import logo from "../assets/logo.png";
 
-const Details = () => {
+const Details = (props) => {
+  const [carro, setCarro] = useState(props.location.state);
+  console.log(carro);
+
   return (
-    <div>
-      ASDasdasd
+    <div className="grid-container">
+      <div className="imageCar">
+        {" "}
+        <img src={logo}></img>
+      </div>
+      <div className="options"></div>
+      <div className="details">
+        <p></p>
+        <p>{carro.brand}</p>
+        <p>{carro.model}</p>
+        <p>{carro.hp}</p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Details
+export default Details;

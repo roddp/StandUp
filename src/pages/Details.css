@@ -1,0 +1,21 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    '. imageCar imageCar imageCar options'
+    '. imageCar imageCar imageCar options'
+    '. details details details options';
+}
+.imageCar {
+  grid-area: imageCar;
+}
+.options {
+  background-color: darkslategray;
+  grid-area: options;
+}
+.details {
+  background-color: rgb(150, 108, 168);
+  grid-area: details;
+}
