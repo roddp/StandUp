@@ -11,6 +11,7 @@ import Details from "../pages/Details";
 
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { CameraRollOutlined } from "@material-ui/icons";
+
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -31,7 +32,8 @@ const precoStyle = {
 
 const Carro = ({ carro }) => {
   const classes = useStyles();
-
+  const carImage = carro.image;
+  console.log(carImage);
   return (
     <Link
       to={{
@@ -56,7 +58,7 @@ const Carro = ({ carro }) => {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <p3 style={precoStyle}>{carro.price + "€"}</p3>{" "}
+          <p style={precoStyle}>{carro.price + "€"}</p>{" "}
         </CardActions>
       </Card>
     </Link>

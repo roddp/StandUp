@@ -11,6 +11,9 @@ import {
 import logo from "../assets/logo.png";
 
 const Navgbar = () => {
+  const buttonStyle = {
+    marginRight: "10px",
+  };
   return (
     <Navbar bg="dark" variant="dark" className="py-3">
       <Navbar.Brand href="/">
@@ -41,8 +44,11 @@ const Navgbar = () => {
           </NavDropdown>
         </Nav>
         <Form inline>
-          <Button variant="outline-success" href="/login">
+          <Button variant="outline-success" href="/login" style={buttonStyle}>
             Login
+          </Button>
+          <Button variant="outline-primary" href="/addCar">
+            + Adicionar Carro
           </Button>
         </Form>
       </Navbar.Collapse>

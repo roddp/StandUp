@@ -1,11 +1,12 @@
 import React from "react";
 import cars from "../assets/cars.json";
 import Carro from "../components/Carro";
+
 const Carros = () => {
   return (
     <>
       {cars.map((car) => (
-        <Carro carro={car}></Carro>
+        <Carro key = {car.id} carro={car}></Carro>
       ))}
     </>
   );

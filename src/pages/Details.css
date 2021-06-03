@@ -12,10 +12,8 @@
   grid-area: imageCar;
 }
 .options {
-  background-color: darkslategray;
   grid-area: options;
 }
 .details {
-  background-color: rgb(150, 108, 168);
   grid-area: details;
 }
