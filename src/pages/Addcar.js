@@ -6,14 +6,25 @@ const Addcar = () => {
         <Form>
   <Form.Row>
     <Form.Group as={Col} controlId="formGridEmail">
-      <Form.Label>Email</Form.Label>
-      <Form.Control type="email" placeholder="Enter email" />
+      <Form.Label>Marca</Form.Label>
+      <Form.Control type="marca" placeholder="Enter marca" />
     </Form.Group>
 
-    <Form.Group as={Col} controlId="formGridPassword">
-      <Form.Label>Password</Form.Label>
-      <Form.Control type="password" placeholder="Password" />
+    <Form.Group as={Col} controlId="formGridEmail">
+      <Form.Label>Modelo</Form.Label>
+      <Form.Control type="modelo" placeholder="Enter Modelo" />
     </Form.Group>
+
+    <Form.Group as={Col} controlId="formGridEmail">
+      <Form.Label>Versao</Form.Label>
+      <Form.Control type="versao" placeholder="Enter versao" />
+    </Form.Group>
+
+    <Form.Group as={Col} controlId="formGridEmail">
+      <Form.Label>Combustivel</Form.Label>
+      <Form.Control type="Combustivel" placeholder="Enter Combustivel" />
+    </Form.Group>
+
   </Form.Row>
 
   <Form.Group controlId="formGridAddress1">

@@ -4,7 +4,6 @@ import logo from "../assets/logo.png";
 
 const Details = (props) => {
   const [carro, setCarro] = useState(props.location.state);
-  console.log(carro);
 
   return (
     <div className="grid-container">
