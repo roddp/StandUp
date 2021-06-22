@@ -6,7 +6,6 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import logo from "../assets/logo.png";
 import Details from "../pages/Details";
 
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
@@ -30,10 +29,11 @@ const precoStyle = {
   alignSelf: "stretch",
 };
 
+  
+
 const Carro = ({ carro }) => {
   const classes = useStyles();
-  const carImage = carro.image;
-  console.log(carImage);
+  const logo = require("../assets/images/"+carro.image+".jpg").default;
   return (
     <Link
       to={{

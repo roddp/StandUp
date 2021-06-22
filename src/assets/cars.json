@@ -7,7 +7,7 @@
     "color": "black",
     "price": "123123",
     "year": "1999",
-    "image": "../assets/images/skyline.jpg"
+    "image": "supra"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "color": "blue",
     "price": "123123",
     "year": "1999",
-    "image": "../assets/images/skyline.jpg"
+    "image": "skyline"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "color": "white",
     "price": "123123",
     "year": "1909",
-    "image": "../assets/images/ae86.jpg"
+    "image": "ae86"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "color": "color",
     "price": "123123",
     "year": "year",
-    "image": "../assets/images/skyline.jpg"
+    "image": "skyline"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "color": "color",
     "price": "123123",
     "year": "year",
-    "image": "../assets/images/skyline.jpg"
+    "image": "skyline"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "color": "color",
     "price": "123123",
     "year": "year",
-    "image": "../assets/logo.png"
+    "image": "skyline"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "color": "color",
     "price": "123123",
     "year": "year",
-    "image": "../assets/logo.png"
+    "image": "skyline"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "color": "color",
     "price": "123123",
     "year": "year",
-    "image": "../assets/logo.png"
+    "image": "skyline"
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "color": "color",
     "price": "123123",
     "year": "year",
-    "image": "../assets/logo.png"
+    "image": "skyline"
   },
   {
     "id": 10,
@@ -97,6 +97,6 @@
     "color": "color",
     "price": "123123",
     "year": "year",
-    "image": "../assets/logo.png"
+    "image": "skyline"
   }
 ]
