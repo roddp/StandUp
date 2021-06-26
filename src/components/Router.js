@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./Navbar";
 import Details from '../pages/Details';
 import AddCar from '../pages/Addcar';
-
+import About from '../pages/About';
 const NavRouter = () => {
   return (
     <Router>
@@ -25,6 +25,9 @@ const NavRouter = () => {
         </Route>
         <Route exact path="/addCar">
           <AddCar></AddCar>
+        </Route>
+        <Route exact path="/about">
+          <About></About>
         </Route>
       </Switch>
     </Router>

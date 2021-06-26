@@ -6,10 +6,9 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import Details from "../pages/Details";
-
+import logo from '../assets/logo.png'
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import { CameraRollOutlined } from "@material-ui/icons";
+
 
 const useStyles = makeStyles({
   root: {
@@ -33,7 +32,15 @@ const precoStyle = {
 
 const Carro = ({ carro }) => {
   const classes = useStyles();
-  const logo = require("../assets/images/"+carro.image+".jpg").default;
+  let carImage = null;
+  try {
+    carImage = require("../assets/images/"+carro.image+".jpg").default;
+  }catch(e){
+    if (e.code !== 'MODULE_NOT_FOUND') {
+        throw e;
+    }
+    carImage = logo;
+  }
   return (
     <Link
       to={{
@@ -45,7 +52,7 @@ const Carro = ({ carro }) => {
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image={logo}
+            image={carImage}
             title="Contemplative Reptile"
           />
           <CardContent>

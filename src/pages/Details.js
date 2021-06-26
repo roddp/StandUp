@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Details.css";
 import { Button } from "react-bootstrap";
-
+import logo from '../assets/logo.png'
 const Details = (props) => {
   const [carro, setCarro] = useState(props.location.state);
   console.log(carro.image);
@@ -16,16 +16,23 @@ const Details = (props) => {
     marginRight: "5px",
   };
 
-  const logo = require("../assets/images/" + carro.image + ".jpg").default;
-
+  let carImage = null;
+  try {
+    carImage = require("../assets/images/"+carro.image+".jpg").default;
+  }catch(e){
+    if (e.code !== 'MODULE_NOT_FOUND') {
+        throw e;
+    }
+    carImage = logo;
+  }
   return (
     <div className="grid-container">
       <div className="imageCar">
-        <img src={logo}></img>
+        <img src={carImage}></img>
       </div>
       <div className="options">
         <h1>{carro.brand + " " + carro.model}</h1>
-        <p>{carro.year + " • " + carro.hp}hp</p>
+        <p>{carro.year + " • " + carro.color +" • " + carro.hp}hp</p>
         <h1 style={priceStyle}>{carro.price} €</h1>
         <Button style={buttonStyle}>Comprar</Button>
         <Button style={buttonStyle} variant="danger" href="/carros">
