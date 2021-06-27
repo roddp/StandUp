@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { createRef } from "react";
 import { Form, Col, Button } from "react-bootstrap";
 
 const Addcar = () => {
+  //states dos valores do form
   const [brand, setBrand] = useState("");
   const [model, setModel] = useState("");
   const [price, setPrice] = useState("");
@@ -22,7 +22,7 @@ const Addcar = () => {
     }
 
     setValidated(true);
-
+    //Post na BD
     fetch(" http://localhost:8000/cars", {
       method: "POST",
       headers: {
@@ -41,6 +41,7 @@ const Addcar = () => {
     });
   };
 
+  //retira o nome do ficheiro
   const handleImage = (e) => {
     const imagename = e.target.files[0].name;
     setImagem(imagename);

@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import logo from '../assets/logo.png'
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
-
+//const para o estilo
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
@@ -21,6 +21,7 @@ const useStyles = makeStyles({
   },
 });
 
+//const para o estilo
 const precoStyle = {
   color: "#EA4E3B",
   fontWeight: "bold",
@@ -29,10 +30,12 @@ const precoStyle = {
 };
 
   
-
+//component que recebe a informação de um unico carro
 const Carro = ({ carro }) => {
   const classes = useStyles();
+  
   let carImage = null;
+  //tenta ir buscar a imagem. Se não existir o logo é metido
   try {
     carImage = require("../assets/images/"+carro.image+".jpg").default;
   }catch(e){
@@ -41,7 +44,9 @@ const Carro = ({ carro }) => {
     }
     carImage = logo;
   }
+
   return (
+    //se a card for carregada, é atribuido aquele pathname e leva o state do carro carregado
     <Link
       to={{
         pathname: "carros/details/" + carro.model,
