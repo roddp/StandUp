@@ -7,6 +7,8 @@ import Nav from "./Navbar";
 import Details from '../pages/Details';
 import AddCar from '../pages/Addcar';
 import About from '../pages/About';
+
+//componente que compara o nome da path e muda para a pagina certa
 const NavRouter = () => {
   return (
     <Router>

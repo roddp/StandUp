@@ -14,6 +14,8 @@ const Navgbar = () => {
   const buttonStyle = {
     marginRight: "10px",
   };
+
+  //href indica qual é o nome da path a ser mudado quando carregado
   return (
     <Navbar bg="dark" variant="dark" className="py-3">
       <Navbar.Brand href="/">

@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import "./Details.css";
 import { Button } from "react-bootstrap";
 import logo from '../assets/logo.png'
+
+ //recebe a data do carro carregado
 const Details = (props) => {
   const [carro, setCarro] = useState(props.location.state);
-  console.log(carro.image);
+
 
   const priceStyle = {
     color: "#EA4E3B",
@@ -16,6 +18,7 @@ const Details = (props) => {
     marginRight: "5px",
   };
 
+  //tenta ir buscar a imagem. Se não existir o logo é metido
   let carImage = null;
   try {
     carImage = require("../assets/images/"+carro.image+".jpg").default;
@@ -25,6 +28,7 @@ const Details = (props) => {
     }
     carImage = logo;
   }
+  
   return (
     <div className="grid-container">
       <div className="imageCar">
