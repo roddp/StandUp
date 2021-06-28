@@ -31,16 +31,6 @@
       "image": "ae86"
     },
     {
-      "id": 4,
-      "brand": "car",
-      "model": "model",
-      "hp": "hp",
-      "color": "color",
-      "price": "123123",
-      "year": "year",
-      "image": "skyline"
-    },
-    {
       "id": 5,
       "brand": "car",
       "model": "model",
@@ -79,36 +69,6 @@
       "price": "123123",
       "year": "year",
       "image": "skyline"
-    },
-    {
-      "id": 9,
-      "brand": "car",
-      "model": "model",
-      "hp": "hp",
-      "color": "color",
-      "price": "123123",
-      "year": "year",
-      "image": "skyline"
-    },
-    {
-      "id": 10,
-      "brand": "car",
-      "model": "model",
-      "hp": "hp",
-      "color": "color",
-      "price": "123123",
-      "year": "year",
-      "image": "skyline"
-    },
-    {
-      "brand": "123",
-      "model": "asd",
-      "price": "asdasd",
-      "color": "asdasd",
-      "hp": "asdas",
-      "year": "asdasdd",
-      "image": "",
-      "id": 11
     }
   ]
 }

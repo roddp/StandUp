@@ -8,6 +8,14 @@ const Details = (props) => {
   const [carro, setCarro] = useState(props.location.state);
 
 
+  const handleDelete = (id) => {
+    fetch('http://localhost:8000/cars/' + id, {
+    method: 'DELETE',
+  })
+  .then(res => res.json()) // or res.json()
+  .then(res => console.log(res))
+
+  }
   const priceStyle = {
     color: "#EA4E3B",
     borderBottom: "1px solid grey",
@@ -39,6 +47,7 @@ const Details = (props) => {
         <p>{carro.year + " • " + carro.color +" • " + carro.hp}hp</p>
         <h1 style={priceStyle}>{carro.price} €</h1>
         <Button style={buttonStyle}>Comprar</Button>
+        <Button style={buttonStyle} onClick={handleDelete(carro.id)}>Apagar</Button>
         <Button style={buttonStyle} variant="danger" href="/carros">
           Voltar
         </Button>
