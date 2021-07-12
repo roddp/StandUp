@@ -11,17 +11,11 @@ const Addcar = () => {
   const [ano, setAno] = useState("");
   const [imagem, setImagem] = useState("");
 
-  const [validated, setValidated] = useState(false);
+
 
   const handleSubmit = (event) => {
-    const form = event.currentTarget;
-
-    if (form.checkValidity() == false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-
-    setValidated(true);
+    event.preventDefault();
+    
     //Post na BD
     fetch(" http://localhost:8000/cars", {
       method: "POST",
@@ -49,8 +43,6 @@ const Addcar = () => {
 
   return (
     <Form
-      noValidate
-      validated={validated}
       onSubmit={handleSubmit}
       style={{ margin: "10px" }}
     >
@@ -119,7 +111,7 @@ const Addcar = () => {
       <Form.Row>
         <Form.Group as={Col} xs="auto" controlId="formGridImg">
           <Form.Label>Imagem</Form.Label>
-          <Form.Control type="file" onChange={(e) => handleImage(e)} />
+          <Form.Control type="file" onChange={(e) => handleImage(e)}  />
         </Form.Group>
       </Form.Row>
 

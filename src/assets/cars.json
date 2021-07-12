@@ -5,9 +5,9 @@
       "brand": "Toyota",
       "model": "Supra",
       "hp": "1000",
-      "color": "black",
+      "color": "Red",
       "price": "123123",
-      "year": "1999",
+      "year": "1990",
       "image": "supra"
     },
     {
@@ -15,60 +15,30 @@
       "brand": "Nissan",
       "model": "Skyline GTR",
       "hp": "1000",
-      "color": "blue",
+      "color": "Blue",
       "price": "123123",
-      "year": "1999",
+      "year": "1990",
       "image": "skyline"
     },
     {
       "id": 3,
       "brand": "Toyota",
       "model": "AE86",
-      "hp": "123123",
-      "color": "white",
+      "hp": "1000",
+      "color": "White",
       "price": "123123",
-      "year": "1909",
+      "year": "1990",
       "image": "ae86"
     },
     {
-      "id": 5,
-      "brand": "car",
-      "model": "model",
-      "hp": "hp",
-      "color": "color",
-      "price": "123123",
-      "year": "year",
-      "image": "skyline"
-    },
-    {
-      "id": 6,
-      "brand": "car",
-      "model": "model",
-      "hp": "hp",
-      "color": "color",
-      "price": "123123",
-      "year": "year",
-      "image": "skyline"
-    },
-    {
-      "id": 7,
-      "brand": "car",
-      "model": "model",
-      "hp": "hp",
-      "color": "color",
-      "price": "123123",
-      "year": "year",
-      "image": "skyline"
-    },
-    {
-      "id": 8,
-      "brand": "car",
-      "model": "model",
-      "hp": "hp",
-      "color": "color",
-      "price": "123123",
-      "year": "year",
-      "image": "skyline"
+      "brand": "something",
+      "model": "test",
+      "price": "123",
+      "color": "123",
+      "hp": "asd",
+      "year": "asd",
+      "image": "",
+      "id": 4
     }
   ]
 }

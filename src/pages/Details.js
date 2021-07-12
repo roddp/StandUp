@@ -2,20 +2,24 @@ import React, { useState } from "react";
 import "./Details.css";
 import { Button } from "react-bootstrap";
 import logo from '../assets/logo.png'
-
+import EditCar from '../components/EditCar'
  //recebe a data do carro carregado
 const Details = (props) => {
   const [carro, setCarro] = useState(props.location.state);
+  const [toEdit, setToEdit] = useState(false)
 
-
-  const handleDelete = (id) => {
-    fetch('http://localhost:8000/cars/' + id, {
+  const handleDelete = () => {
+    fetch('http://localhost:8000/cars/' + carro.id, {
     method: 'DELETE',
   })
-  .then(res => res.json()) // or res.json()
-  .then(res => console.log(res))
+  .then(console.log("Deleted "+carro.id)) 
 
   }
+
+  const handleEdit = () => {
+    setToEdit(true);
+  }
+  
   const priceStyle = {
     color: "#EA4E3B",
     borderBottom: "1px solid grey",
@@ -46,8 +50,8 @@ const Details = (props) => {
         <h1>{carro.brand + " " + carro.model}</h1>
         <p>{carro.year + " • " + carro.color +" • " + carro.hp}hp</p>
         <h1 style={priceStyle}>{carro.price} €</h1>
-        <Button style={buttonStyle}>Comprar</Button>
-        <Button style={buttonStyle} onClick={handleDelete(carro.id)}>Apagar</Button>
+        <EditCar details = {carro} ></EditCar>
+        <Button style={buttonStyle} onClick={handleDelete}>Apagar</Button>
         <Button style={buttonStyle} variant="danger" href="/carros">
           Voltar
         </Button>
