@@ -2,6 +2,6 @@
 
 
 ## Technologies
-HTML, CSS, React, BoostrapReact, MaterialUI
+HTML, CSS, React, BootsrapReact, MaterialUI
 
 
